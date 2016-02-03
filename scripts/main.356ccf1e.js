@@ -1,0 +1,1 @@
+"use strict";!function(a,b){var c;a(function(){var a=document.getElementById("site-header").querySelector(".navbar-brand");c=new b(a,{offset:200,tolerance:5,classes:{initial:"headroom",pinned:"headroom--pinned",unpinned:"headroom--unpinned",top:"headroom--top",notTop:"headroom--not-top"}}),c.init()})}(jQuery,Headroom);
