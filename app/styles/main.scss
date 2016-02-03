@@ -1,0 +1,156 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$fa-font-path: "../bower_components/font-awesome/fonts";
+
+$headings-font-family: 'Shadows Into Light', cursive;
+@import "bootswatch/variables";
+$navbar-default-brand-color: $brand-primary;
+$navbar-default-border: $body-bg;
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+// endbower
+@import "bootswatch/bootswatch";
+
+body {
+  padding-top: $navbar-height;
+}
+
+.jay {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
+  @media screen and (min-width: $screen-md-min) {
+    font-size: 36px;
+    margin-top: 4px;
+    margin-bottom: -10px;
+
+    .home &.headroom {
+      transition: .1s opacity;
+      &.headroom--top {
+        opacity: 0;
+      }
+
+      &.headroom--not-top {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.home-banner {
+  height: calc(100vh - #{$navbar-height});
+  background: {
+    image: url('../images/logo.png');
+    size: cover;
+    attachment: fixed;
+    position: center left;
+    repeat: no-repeat;
+  }
+  margin: {
+    bottom: 0;
+  }
+
+  .container {
+    position: relative;
+    height: 100%;
+  }
+
+  * {
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
+    color: $brand-primary
+  }
+
+  .social {
+    position: absolute;
+    bottom: 0;
+    a {
+      margin-right: 15px;
+    }
+  }
+}
+
+.thin-top {
+  margin-top: 0;
+}
+
+.subtitle {
+  display: block;
+  font-size: 50%;
+  font-weight: normal;
+}
+
+.home-section {
+  padding: {
+    top: $grid-gutter-width / 2;
+    bottom: $grid-gutter-width / 2;
+  }
+  &.home-section-alt {
+    background-color: $gray-light
+  }
+}
+
+.portfolio-album {
+  @include make-sm-column(6);
+  @include make-md-column(4);
+  @include make-lg-column(3);
+
+  margin: {
+    top: $grid-gutter-width / 2;
+    bottom: $grid-gutter-width / 2;
+  }
+}
+
+.site-footer {
+  background-color: darken($body-bg, 10);
+  padding: {
+    top: $grid-gutter-width / 2;
+    bottom: $grid-gutter-width / 2;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+}
+
+.page {
+  @media screen and (min-width: $screen-sm-min) {
+    background: {
+      image: url('../images/logo.png');
+      size: cover;
+      attachment: fixed;
+      position: center left;
+      repeat: no-repeat;
+    }
+  }
+}
+
+.page-content {
+  @media screen and (min-width: $screen-sm-min) {
+    margin: {
+      top: 40px;
+      bottom: 40px;
+    }
+
+    .page-header {
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: $screen-md-min) {
+    margin: {
+      top: 60px;
+      bottom: 60px;
+    }
+  }
+
+  background-color: $body-bg;
+
+  @include clearfix();
+  @include make-md-column(10);
+  @include make-md-column-offset(1);
+  @include make-lg-column(8);
+  @include make-lg-column-offset(2);
+
+}
